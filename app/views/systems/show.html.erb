@@ -1,9 +1,38 @@
-<h1>Have a Look</h1>
-<%= @system.name %><br>
+<h1 align="center" style="font-family: Verdana; color: green"><em>Have a Look</em></h1>
+<center>
+	<div style="width: 800px">
+		<table border="1px" width="400px">
+			<tr>
+				<td align="right" width="80px">Name:</td>
+				<td><%= @system.name %></td>
+			</tr>
+				<td align="right" width="80px">Surname:</td>
+				<td><%= @system.surname %></td>
+			<tr>
+				<td align="right" width="80px">Age:</td>
+				<td><%= @system.age %></td>
+			</tr>
+			<tr>
+				<td align="right" width="80px">Email:</td>
+				<td><%= @system.email %></td>
+			</tr>
+			<tr>
+				<td align="right" width="80px">Skype:</td>
+				<td><%= @system.skype %></td>
+			</tr>
+		</table>
+		<%= link_to "back", :back %>
+		<%= link_to "delete", system_path(@system), method: :delete, data: { confirm: "Are you sure?" } %>
+		<p><%= link_to "edit", edit_system_path(@system.id) %></p>
+	</div>
+</center>
+
+
+<!-- <%= @system.name %><br>
 <%= @system.surname %><br>
 <%= @system.age %><br>
 <%= @system.email %><br>
 <%= @system.skype %><br>
 <%= link_to "back", :back %>
 <%= link_to "delete", system_path(@system), method: :delete, data: { confirm: "Are you sure?" } %>
-<%= link_to "edit", edit_system_path(@system.id) %>
+<%= link_to "edit", edit_system_path(@system.id) %> -->
