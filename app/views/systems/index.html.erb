@@ -1,0 +1,10 @@
+<% @systems.each do |s| %>
+<%= s.name %><br>
+<%= s.surname %><br>
+<%= s.age %><br>
+<%= s.email %><br>
+<%= s.skype %><br>
+<%= link_to "show", system_path(id: s.id) %><br>
+<% end %>
+
+<%= link_to "new", new_system_path %>

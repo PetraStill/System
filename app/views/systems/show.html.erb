@@ -1,0 +1,9 @@
+<h1>Have a Look</h1>
+<%= @system.name %><br>
+<%= @system.surname %><br>
+<%= @system.age %><br>
+<%= @system.email %><br>
+<%= @system.skype %><br>
+<%= link_to "back", :back %>
+<%= link_to "delete", system_path(@system), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to "edit", edit_system_path(@system.id) %>

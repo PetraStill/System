@@ -1,0 +1,10 @@
+<h1>Create a New Person</h1>
+<%= simple_form_for @system, url: {action: "create"} do |s| %>
+	<%= s.input :name %>
+	<%= s.input :surname %>
+	<%= s.input :age %>
+	<%= s.input :email %>
+	<%= s.input :skype %>
+	<%= s.button :submit %>
+<% end %>
+<%= link_to "back", root_path %>

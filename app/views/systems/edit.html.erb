@@ -1,0 +1,10 @@
+<%= simple_form_for @system, url: {action: "update"}, method: :put do |s| %>
+	<%= s.input :name %>
+	<%= s.input :surname %>
+	<%= s.input :age %>
+	<%= s.input :email %>
+	<%= s.input :skype %>
+	<%= s.button :submit %>
+<% end %>
+
+<%= link_to "back", root_path %>
