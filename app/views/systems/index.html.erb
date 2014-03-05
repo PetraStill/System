@@ -1,3 +1,34 @@
+<%= link_to "new", new_system_path %>
+
+<center>
+	<table border="1px">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>Age</th>
+				<th>Email</th>
+				<th>Skype</th>
+				<th colspan="5">What would you like to do?</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @systems.each do |s| %>
+			<tr>
+				<td><%= s.name %></td>
+				<td><%= s.surname %></td>
+				<td><%= s.age %></td>
+				<td><%= s.email %></td>
+				<td><%= s.skype %></td>
+				<td><%= link_to "show", system_path(id: s.id) %></td>
+				<td><%= link_to "edit", edit_system_path(id: s.id) %></td>
+				<td><%= link_to "delete", system_path(id: s.id), method: :delete, data: { confirm: "Are you sure?" } %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</center>
+
 <% @systems.each do |s| %>
 <%= s.name %><br>
 <%= s.surname %><br>
@@ -7,4 +38,3 @@
 <%= link_to "show", system_path(id: s.id) %><br>
 <% end %>
 
-<%= link_to "new", new_system_path %>
